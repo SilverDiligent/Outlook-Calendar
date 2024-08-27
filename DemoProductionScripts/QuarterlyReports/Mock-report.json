@@ -1,0 +1,23 @@
+[
+  {
+    "Mailbox": "alexisc@alexislab.com",
+    "GrantedTo": "Monthly-Mailbox-Reports",
+    "AccessRights": [
+      "FullAccess"
+    ]
+  },
+  {
+    "Mailbox": "DiscoverySearchMailbox{D919BA05-46A6-415f-80AD-7E09334BB852}@Alexislabs.onmicrosoft.com",
+    "GrantedTo": "Discovery Management",
+    "AccessRights": [
+      "FullAccess"
+    ]
+  },
+  {
+    "Mailbox": "No-Reply@Alexislab.com",
+    "GrantedTo": "ACrawford@Alexislab.com",
+    "AccessRights": [
+      "FullAccess"
+    ]
+  }
+]

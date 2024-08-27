@@ -1,0 +1,7 @@
+﻿{
+  "tenantId": "00a9f7b2-9733-42fa-9b43-3ffc9f5d132d",
+  "appId": "795cf684-5f23-4e8c-abdc-985fa7eae3ec",
+  "clientSecretString": "0rc8Q~h~g4udUwGAS.CsV-qR23ujqOK_inbZUdzy",
+  "scope": "https://graph.microsoft.com/.default",
+  "tokenUrl": "https://graph.microsoft.com/v1.0/users/$fromEmail/sendMail"
+}

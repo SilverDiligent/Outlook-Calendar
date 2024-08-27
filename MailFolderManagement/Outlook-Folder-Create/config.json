@@ -1,0 +1,7 @@
+{
+  "clientId": "78ecae2c-3a8b-477c-904d-42a3aa073c42",
+  "tenantId": "d3065d80-2d77-4b5c-b113-1ac3ca4698ce",
+  "p12Path": "/Users/alexiscrawford/Cer/certificates.p12",
+  "p12Password": "Plasticsink72!",
+  "scope": "https://graph.microsoft.com/.default"
+}

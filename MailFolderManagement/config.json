@@ -1,0 +1,8 @@
+{
+  "clientId": "78ecae2c-3a8b-477c-904d-42a3aa073c42",
+  "tenantId": "d3065d80-2d77-4b5c-b113-1ac3ca4698ce",
+  "p12Path": "/Users/alexiscrawford/Cer/GraphApiToken.cer",
+  "scope": "https://graph.microsoft.com/.default",
+  "Thumbprint": "3D03CE54B04950D84D8C7271A558BA388862F7AB"
+  
+}
