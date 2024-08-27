@@ -1,3 +1,38 @@
+<#
+.SYNOPSIS
+This script checks the last result of scheduled tasks and sends an email notification if there was an error.
+
+.DESCRIPTION
+The script performs the following steps:
+1. Initialization: Initializes the necessary variables and sets the location to the scheduled tasks folder.
+2. Function Declarations: Declares helper functions for checking if a task is logged and logging a task.
+3. Main Processing: Defines the main function, Get-LastTaskResult, which retrieves the last result of a specified task. Executes the main processing logic:
+  - Retrieves the names of all scheduled tasks that are not disabled or running.
+  - Iterates over each task and retrieves its information.
+  - Checks the last result of the task and if it is not successful, sends an email notification and logs the task.
+  - Adds the task details to the results hashtable.
+4. Reporting: Reports the results in a formatted table.
+
+.PARAMETER taskName
+The name of the scheduled task to check.
+
+.INPUTS
+None. You cannot pipe objects to this script.
+
+.OUTPUTS
+A formatted table containing the task name, last run time, and last run result.
+
+.EXAMPLE
+.\CheckTaskAndSendAlert.ps1 -taskName "MyTask"
+Retrieves the last result of the task named "MyTask" and sends an email notification if there was an error.
+
+.NOTES
+- Author: Alexis Crawford
+- This script requires the "send-GraphEmail.ps1" script to be present in the same directory.
+- The script uses the "schtasks" command-line utility to retrieve task information.
+- The email notification is sent using the "send-GraphEmail" function.
+- The script logs the tasks that have already been processed in the "errorTasks.log" file.
+#>
 # ------------------------
 # 1. Initialization
 # ------------------------
