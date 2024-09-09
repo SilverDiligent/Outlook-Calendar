@@ -1,0 +1,11 @@
+/AggregateEmailActivityReport/
+/Daily Scripts/
+/DemoProductionScripts/
+/Exchange Management Scripts/
+/Get-LastTaskResult/
+/MailFolderManagement/
+/MailboxSecurityAudit/
+/PSProfile/
+/Update-Assistant/
+.DS_Store
+Config.Json
