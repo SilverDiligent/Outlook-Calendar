@@ -65,7 +65,7 @@ try {
    if ($pfxCert -eq $null) {
        $message = "Certificate with thumbprint $thumbprint not found in the local machine store."
        Write-Host $message
-       
+
        return
    } else {
        Write-Host "Certificate loaded successfully."
@@ -73,7 +73,7 @@ try {
 } catch {
    $message = "Failed to load certificate: $_"
    Write-Host $message
-   
+
    return
 }
 
@@ -85,14 +85,14 @@ try {
 } catch {
    $message = "Failed to retrieve access token: $_"
    Write-Host $message
-   
+
    return
 }
 
 if (-not $accessToken) {
    $message = "Access token is empty. Please check your credentials and network connection."
    Write-Host $message
-   
+
    return
 }
 
@@ -102,7 +102,7 @@ $headers = @{
 }
 
 # Retrieve the list of user mailboxes dynamically
-# $usermailboxes = @("alexis.crawford@srpnet.com", "Lina.Smith@srpnet.com")
+# $usermailboxes = @("user1@domain.com", "user2@domain.com")
 
  $userMailboxes = Get-EXOMailbox -ResultSize Unlimited -RecipientTypeDetails UserMailbox | Select-Object -ExpandProperty PrimarySmtpAddress
 
@@ -155,7 +155,7 @@ foreach ($holiday in $holidayData) {
            if ($existingEvents.Count -eq 0) {
                if ($DryRun) {
                    Write-Host "Dry Run: Would create new event: $($holidaySubject) for $($email) on $holidayDate"
-                   
+
                } else {
                    # Event doesn't exist, create new event
                    $holidayDetails = @{
@@ -177,12 +177,12 @@ foreach ($holiday in $holidayData) {
                    $createResponse = Invoke-RestMethod -Uri $createUri -Headers $headers -Method Post -ContentType "application/json" -Body $jsonBody
 
                    Write-Host "Created new event: $($holidaySubject) for $($email)"
-                   
+
                }
            } else {
                $message = "Event with subject $($holidaySubject) already exists for $($email), skipping creation."
                Write-Host $message
-               
+
            }
 
            # Add the mailbox and action to the report
@@ -197,7 +197,7 @@ foreach ($holiday in $holidayData) {
        catch {
            $message = "Error processing calendar event for ${email}: $_"
            Write-Error $message
-           
+
        }
    }
 }
