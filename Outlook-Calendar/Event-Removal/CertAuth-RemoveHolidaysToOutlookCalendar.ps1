@@ -26,7 +26,7 @@
 
    - The CSV file should have at least 2 columns: Email and FolderPath. Here is an example of the format:
        Email,FolderPath
-       alexis.crawford@srpnet.com,Inbox/Subfolder1
+       user1@domain.com,Inbox/Subfolder1
 
 .LINK
    Microsoft Graph API: https://docs.microsoft.com/en-us/graph/overview
